@@ -52,7 +52,7 @@ class AuthController extends Controller
     try {
         $request['role'] = '1';
         $this->model->create($request->all());
-        return response(['message' => "Successfully created"], 201); // 201 Created
+        return response(['message' => "Successfully created"], 201); // 2
     } catch (\Exception $e) {
         return response(['message' => $e->getMessage()], 500); // 500 Internal Server Error
     }
